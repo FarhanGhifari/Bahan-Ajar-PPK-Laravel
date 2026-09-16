@@ -18,7 +18,11 @@
         @endif
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-        <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
+        <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 flex items-center justify-between">
+            <div class="header-info flex items-center gap-2">
+                <span id="jam" class="font-mono text-xs px-2.5 py-1 rounded bg-gray-100 dark:bg-[#161615] border border-gray-200 dark:border-[#3E3E3A]"></span>
+                <span id="browser-info" class="text-xs px-2.5 py-1 rounded bg-gray-100 dark:bg-[#161615] border border-gray-200 dark:border-[#3E3E3A]"></span>
+            </div>
             @if (Route::has('login'))
                 <nav class="flex items-center justify-end gap-4">
                     @auth
@@ -219,5 +223,7 @@
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+
+        <script src="{{ asset('js/script.js') }}"></script>
     </body>
 </html>
